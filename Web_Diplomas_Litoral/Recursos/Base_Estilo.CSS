@@ -1,0 +1,64 @@
+:root {
+    /* === COLORES PRINCIPALES === */
+    --color-primario: #373636;
+    --color-secundario: #F8C013;
+    --color-gris-oscuro: #5D5D5D;
+    --color-gris-claro: #E5E5E5;
+    --color-gris-medio: #A9A9A9;
+    --color-gris-suave: #D9D9D9;
+    --color-verde: #009F2A;
+    --color-negro: #292929;
+    --color-gris-profundo: #323131;
+    --color-rojo: #D80004;
+    --color-blanco: #F2F2F2;
+
+    /* === VARIANTES DE OPACIDAD === */
+    --color-primario-80: rgba(55, 54, 54, 0.8);     /* #373636 80% */
+    --color-gris-35: rgba(93, 93, 93, 0.35);        /* #5D5D5D 35% */
+    --color-verde-40: rgba(0, 159, 42, 0.4);        /* #009F2A 40% */
+    --color-rojo-50: rgba(216, 0, 4, 0.5);          /* #D80004 50% */
+    --color-amarillo-20: rgba(248, 192, 19, 0.2);   /* #F8C013 20% */
+
+    /* ===========================
+        TIPOGRAFÍA Y TAMAÑOS
+        Typography & Sizing
+    ============================ */
+
+    /* === SOMBRAS Y PROFUNDIDAD === */
+    --shadow-base: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --shadow-elevada: 0 6px 8px rgba(0, 0, 0, 0.3);
+    --shadow-suave: 0 2px 3px rgba(0, 0, 0, 0.15);
+
+    /* === TIPOGRAFÍA === */
+    --font-family-primary: "Poppins", sans-serif;
+    --font-family-secondary: "Roboto", sans-serif;
+
+    /* === ESCALA DE TAMAÑOS DE FUENTE === */
+    --font-size-xxs: 0.65rem;  /* Texto auxiliar */
+    --font-size-xs: 0.75rem;   /* Etiquetas o notas */
+    --font-size-sm: 0.9rem;    /* Texto informativo */
+    --font-size-md: 1rem;      /* Cuerpo de texto */
+    --font-size-lg: 1.25rem;   /* Subtítulos */
+    --font-size-xl: 1.5rem;    /* Encabezados medianos */
+    --font-size-2xl: 2rem;     /* Títulos principales */
+    --font-size-3xl: 2.5rem;   /* Titulares destacados */
+    --font-size-responsive-sm: 1vw;
+    --font-size-responsive-md: 1.7vw;
+
+    /* === PESOS TIPOGRÁFICOS === */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+    --font-weight-black: 900;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}

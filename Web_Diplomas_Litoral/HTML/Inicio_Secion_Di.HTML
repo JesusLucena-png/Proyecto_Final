@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ========================================= -->
+    <!-- ENLACES CSS PRINCIPALES / MAIN STYLES -->
+    <!-- ========================================= -->
+    <link rel="stylesheet" href="/CSS/Inicio_Secion_Di.CSS">
+    
+    <!-- ========================================= -->
+    <!-- ENLACES DE FUENTES / FONT LINKS -->
+    <!-- ========================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- ========================================= -->
+    <!-- ENLACES DE ÍCONOS / ICON LINKS -->
+    <!-- ========================================= -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <section class="login-section">
+        <div class="login-section__image-container">
+            <div class="login-section__overlay"></div>
+            <img src="/IMG/home_img_2_2-2048x1152 1.svg" alt="Imagen corporativa" class="login-section__image">
+        </div>
+        
+        <div class="login-section__form-container">
+            <div class="login-form">
+                <img src="/IMG/Group 118 (1).svg" class="vector" alt="Logo Litoral">
+            </div>
+
+            <form class="login-form" method="post" id="form">
+                <div class="login-form__group Titulo">  
+                    <h2>SIGN IN</h2>
+                </div>
+
+
+                <div class="login-form__group">  
+                    <label for="usuario" class="login-form__label">User Name</label>
+                    <input type="text" id="usuario" name="usuario"  placeholder="User Name" required class="login-form__input-text">
+                </div>
+
+                <div class="login-form__group"> 
+                    <label for="contraseña" class="login-form__label">Password</label>
+                    <div class="login-form__password-group">
+                        <input type="password" id="contraseña" name="contraseña" placeholder="Password" required class="login-form__input-Password">
+                        <div class="login-form__icon">
+                            <i class="login-form__icon login-form__icon--show bx bx-show"></i>
+                            <i class="login-form__icon login-form__icon--hide bx bx-hide"></i>
+                        </div>
+                    </div>
+                    <div class="login-form__recovery-link">
+                        <a href="#" class="recovery-link">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>  
+
+            <div class="login-form"> 
+                <button type="submit" form="form" class="login-form__submit">INICIO</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="/JS/Input_Password.JS"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+:root {
+    /* === COLORES PRINCIPALES === */
+    --color-primario: #373636;
+    --color-secundario: #F8C013;
+    --color-gris-oscuro: #5D5D5D;
+    --color-gris-claro: #E5E5E5;
+    --color-gris-medio: #A9A9A9;
+    --color-gris-suave: #D9D9D9;
+    --color-verde: #009F2A;
+    --color-negro: #292929;
+    --color-gris-profundo: #323131;
+    --color-rojo: #D80004;
+    --color-blanco: #F2F2F2;
+
+    /* === VARIANTES DE OPACIDAD === */
+    --color-primario-80: rgba(55, 54, 54, 0.8);     /* #373636 80% */
+    --color-gris-35: rgba(93, 93, 93, 0.35);        /* #5D5D5D 35% */
+    --color-verde-40: rgba(0, 159, 42, 0.4);        /* #009F2A 40% */
+    --color-rojo-50: rgba(216, 0, 4, 0.5);          /* #D80004 50% */
+    --color-amarillo-20: rgba(248, 192, 19, 0.2);   /* #F8C013 20% */
+
+    /* ===========================
+        TIPOGRAFÍA Y TAMAÑOS
+        Typography & Sizing
+    ============================ */
+
+    /* === SOMBRAS Y PROFUNDIDAD === */
+    --shadow-base: 0 4px 4px rgba(0, 0, 0, 0.3);
+    --shadow-elevada: 0 6px 8px rgba(0, 0, 0, 0.3);
+    --shadow-suave: 0 2px 3px rgba(0, 0, 0, 0.15);
+
+    /* === TIPOGRAFÍA === */
+    --font-family-primary: "Poppins", sans-serif;
+    --font-family-secondary: "Roboto", sans-serif;
+
+    /* === ESCALA DE TAMAÑOS DE FUENTE === */
+    --font-size-12: 75%;   /* Etiquetas o notas */
+    --font-size-14: 87.5%;    /* Texto informativo */
+    --font-size-16: 100%;      /* Cuerpo de texto */
+    --font-size-18: 112.5%;   /* Subtítulos */
+    --font-size-20: 125%;    /* Encabezados medianos */
+    --font-size-24: 150%;     /* Títulos principales */
+    --font-size-32: 200%;   /* Titulares destacados */
+    --font-size-responsive-sm: 1vw;
+    --font-size-responsive-md: 1.5vw;
+
+    /* === PESOS TIPOGRÁFICOS === */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+    --font-weight-black: 900;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    /* Dimensiones y Posicionamiento / Dimensions and Positioning */
+    width: 100vw;
+    height: auto;
+
+    /* Colores y Estética / Colors and Aesthetics */
+    background-color: var(--color-negro);
+
+    /* Tipografía y Tamaños / Typography and Sizing */
+    font-size: var(--font-size-responsive-sm);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    font-style: normal;
+}
+.login-section{
+    /* Dimensiones y Posicionamiento / Dimensions and Positioning */
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-section__image-container{
+    /* Dimensiones y Posicionamiento / Dimensions and Positioning */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    width: 60vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    /* Colores y Estética / Colors and Aesthetics */
+    border-radius: 50px 0 0 50px;
+    background-color: var(--color-negro);
+    box-shadow: var(--shadow-base);
+
+}
+.login-section__overlay{
+    position: absolute;
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(var(--color-negro),var(--color-secundario));
+    opacity: 0.50;
+
+}
+.login-section__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -200px;
+}
+
+.login-section__form-container{
+    /* Dimensiones y Posicionamiento / Dimensions and Positioning */
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
+    gap: 20px;
+
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.login-section__logo{
+    width: 50%;
+    height: auto;
+}
+.login-section__logo img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(var(--shadow-base));
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    height: auto;
+
+    gap: 15px;
+}
+.login-form__group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 1px;
+    
+}
+.login-form__group h2{
+    color: var(--color-secundario);
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: var(--font-size-20);
+    text-shadow: var(--shadow-base);
+    font-weight: var(--font-weight-medium);
+}
+.login-form__password-group,.login-form__recovery-link{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.login-form__label{
+    color: var(--color-secundario);
+    text-transform: initial;
+
+    padding-left: 15px;
+
+    font-size: var(--font-size-16);
+    text-shadow: var(--shadow-base);
+    font-weight: var(--font-weight-regular);
+}
+.login-form__recovery-link{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.recovery-link{
+    color: var(--color-secundario);
+    font-size:var(--font-size-12);
+    font-weight: var(--font-weight-extra-light);
+}
+.login-form__submit{
+    width: 100%;
+    padding: 10px 15px;
+
+    border-radius: 50px;
+    border: none;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-semi-bold);
+    box-shadow: var(--shadow-base);
+
+    transition: all 0.5s ease;
+}
+.login-form__submit:hover{
+    background-color: var(--color-blanco);
+    transform: scale(1.05);
+    color: var(--color-secundario);
+}
+.login-form__input-text,.login-form__input-Password{
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px 15px;
+    box-shadow: var(--shadow-base);
+    border: 1.5px solid var(--color-secundario);
+    background-color: var(--color-negro);
+
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-14);
+}
+.login-form__password-group{
+    width: 100%;
+    justify-content: flex-end;
+    align-items: end;
+    position: relative;
+}
+.login-form__icon{
+    position: absolute;
+    transform: translateY(-50%);
+    right: 10px; /* distancia desde el borde derecho del input */
+    top: 50%;
+    cursor: pointer;
+    display: none;
+    color: var(--color-negro);
+    font-size: var(--font-size-18);
+}
+.login-form__input-text:focus,.login-form__input-Password:focus{
+    outline: none;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    transition: all 0.5s ease;
+}
+.login-form__input-text::placeholder,.login-form__input-Password::placeholder{
+    color: var(--color-gris-oscuro);
+}
+.login-form__input-text:focus::placeholder,.login-form__input-Password:focus::placeholder{
+    color: var(--color-gris-profundo);
+}
+
+.login-form__password-group.active .login-form__icon {
+  display: block;
+}
+.login-form__icon--hide {
+  display: none;
+}
+
+.login-form__input-text:not(:placeholder-shown),.login-form__input-Password:not(:placeholder-shown){
+    background-color: var(--color-blanco);
+}
+.login-form__input-text:not(:placeholder-shown):not(:focus),.login-form__input-Password:not(:placeholder-shown):not(:focus){
+    color: var(--color-gris-medio);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 1000px) {
+    body{
+        font-size: var(--font-size-responsive-md);
+    }
+    .login-section{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .login-section__image-container{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .login-section__form-container{
+        width: auto;
+        height: auto;
+        padding: 80px 40px;
+        border-radius: 15px;
+        position: absolute;
+        background-color: var(--color-negro);
+        box-shadow: var(--shadow-base);
+    }
+    .login-form{
+        width: 80%;
+    }
+} 
+
+/* 🔒 Eliminar el icono del ojo de Windows/Edge */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* 🔒 Quitar botones internos en navegadores WebKit (Chrome, Opera, Safari) */
+input[type="password"]::-webkit-textfield-decoration-container,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
