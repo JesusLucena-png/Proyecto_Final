@@ -37,3 +37,15 @@ hideIcon.addEventListener('mousedown', (event) => {
   showIcon.style.display = 'block';
   passwordInput.focus(); // mantiene el foco en el input
 });
+
+
+
+
+const errormsg = document.querySelector('.error-msg');
+
+document.addEventListener('click', (e) => {
+  if (!errormsg) return;
+  if (!errormsg.contains(e.target)) {
+    errormsg.remove();
+  }
+});

@@ -1,0 +1,547 @@
+:root {
+    /* === COLORES PRINCIPALES === */
+    --color-primario: #373636;
+    --color-secundario: #F8C013;
+    --color-gris-oscuro: #5D5D5D;
+    --color-gris-claro: #E5E5E5;
+    --color-gris-medio: #A9A9A9;
+    --color-gris-suave: #D9D9D9;
+    --color-verde: #009F2A;
+    --color-negro: #292929;
+    --color-gris-profundo: #323131;
+    --color-rojo: #D80004;
+    --color-blanco: #fff;
+    --color-blanco-2: #f2f2f2;
+    --color-azul: #6255E9;
+
+    /* === VARIANTES DE OPACIDAD === */
+    --color-primario-80: rgba(55, 54, 54, 0.8);     /* #373636 80% */
+    --color-gris-35: rgba(93, 93, 93, 0.35);        /* #5D5D5D 35% */
+    --color-verde-40: rgba(0, 159, 42, 0.1);        /* #009F2A 40% */
+    --color-rojo-50: rgba(216, 0, 4, 0.5);          /* #D80004 50% */
+    --color-amarillo-20: rgba(248, 192, 19, 0.2);   /* #F8C013 20% */
+
+    /* ===========================
+        TIPOGRAFÍA Y TAMAÑOS
+        Typography & Sizing
+    ============================ */
+
+    /* === SOMBRAS Y PROFUNDIDAD === */
+    --shadow-base: 0 4px 15px rgba(0,0,0,0.1);
+    --shadow-elevada: 0 6px 8px rgba(0, 0, 0, 0.3);
+    --shadow-suave: 0 2px 3px rgba(0, 0, 0, 0.15);
+
+    /* === TIPOGRAFÍA === */
+    --font-family-primary: "Poppins", sans-serif;
+    --font-family-secondary: "Roboto", sans-serif;
+
+    /* === ESCALA DE TAMAÑOS DE FUENTE === */
+    --font-size-12: 75%;   /* Etiquetas o notas */
+    --font-size-14: 87.5%;    /* Texto informativo */
+    --font-size-16: 100%;      /* Cuerpo de texto */
+    --font-size-18: 112.5%;   /* Subtítulos */
+    --font-size-20: 125%;    /* Encabezados medianos */
+    --font-size-24: 150%;     /* Títulos principales */
+    --font-size-32: 200%;   /* Titulares destacados */
+    --font-size-responsive-sm: 1vw;
+    --font-size-responsive-md: 1.5vw;
+
+    /* === PESOS TIPOGRÁFICOS === */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+    --font-weight-black: 900;
+}
+*{
+    /* 1) Posicionamiento y caja */
+    box-sizing: border-box;
+
+    /* 2) Reset de espacio */
+    padding: 0;
+    margin: 0;
+}
+
+/* ======= Reglas de orden por definición (posición → dimensiones → visuales → borde → tipografía → efectos) ======= */
+body{
+    /* 1) Posicionamiento */
+    display: block;
+
+    /* 2) Dimensiones */
+    width: 100%;
+    height: auto;
+    height: auto;
+    /* 3) Visuales */
+    background-color: var(--color-blanco-2);
+
+    /* 4) Bordes / none */
+
+    /* 5) Tipografía y Tamaños */
+    font-size: var(--font-size-responsive-sm);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    font-style: normal;
+
+    /* 6) Efectos */
+    user-select: none;
+}
+.Content_Ver{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+.Contenedor_Form{
+    /* 1) Posicionamiento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 2) Dimensiones */
+    width: 100%;
+    height: 100%;
+}
+.Contenedor_Form form{
+    /* 1) Posicionamiento */
+    display: flex;
+    flex-direction: column;
+
+    /* 2) Dimensiones */
+    width: 98%;
+    height: 98%;
+    padding: 20px;
+    gap: 5px;
+
+    /* 3) Visuales */
+    background-color: var(--color-blanco);
+    box-shadow: var(--shadow-base);
+
+    /* 4) Bordes */
+    border-radius: 10px;
+
+    /* 5) Tipografía */
+    font-family: var(--font-family-primary);
+    color: var(--color-primario-80);
+}
+.h3{
+    /* 1) Posicionamiento */
+    display: flex;
+    align-items: center;
+
+    /* 2) Dimensiones */
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+    /* 3) Visuales */
+    background-color: var(--color-gris-claro);
+    color: var(--color-primario-80);
+
+    /* 4) Bordes */
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 10px;
+
+    /* 5) Tipografía */
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    gap: 5px;
+}
+.Contenedor_Form form h3 i{
+    line-height: 0%;
+}
+.Form_info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Form_info label{
+    font-weight: var(--font-weight-medium);
+}
+input, select{
+    /* 1) Posicionamiento */
+    display: flex;
+    justify-content: space-between;
+
+    /* 2) Dimensiones */
+    width: 25vw;
+    padding: 5px 15px;
+
+    /* 3) Visuales */
+    background: transparent;
+    color: var(--color-primario-80);
+
+    /* 4) Bordes */
+    border: 1px solid var(--color-gris-suave);
+    border-radius: 50px;
+
+    /* 5) Tipografía */
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+}
+input:focus, select:focus{
+    border: 1px solid var(--color-azul);
+    outline: none;
+    font-family: var(--font-family-primary);
+    color: var(--color-negro);
+    font-weight: var(--font-weight-medium);
+    background-color: #6155e910;
+    box-shadow:  0 4px 15px #6155e920;
+    transition: all 0.5s all;
+}
+.content_button{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.acciones{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn{
+    /* 1) Posicionamiento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 2) Dimensiones */
+    gap: 5px;
+    padding: 0.8vw 1.2vw;
+
+    /* 3) Visuales */
+    background-color: var(--color-blanco);
+    border: 1px solid;
+
+    /* 4) Bordes */
+    border-radius: 5px;
+
+    /* 5) Tipografía */
+    font-size: var(--font-size-14);
+    text-align: center;
+
+    /* 6) Efectos */
+    transition: all 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    text-align: center;
+}
+.btn i{
+    line-height: 0%;
+}
+/* Variantes de color para botones: usar siempre `class="btn <color>"` */
+.btn.azul{
+    border-color: var(--color-azul);
+    color: var(--color-azul);
+}
+.btn.azul:hover{
+    border-color: var(--color-blanco);
+    color: var(--color-blanco);
+    background-color: var(--color-azul);
+}
+
+.btn.amarillo{
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+.btn.amarillo:hover{
+    border-color: var(--color-blanco);
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
+}
+.btn.icono{
+    font-size: var(--font-size-24);
+}
+.btn.rojo{
+    border-color: var(--color-rojo);
+    color: var(--color-rojo);
+}
+.btn.rojo:hover{
+    border-color: var(--color-blanco);
+    color: var(--color-blanco);
+    background-color: var(--color-rojo);
+}
+
+.btn.verde{
+    border-color: var(--color-verde);
+    color: var(--color-verde);
+}
+.btn.verde:hover{
+    border-color: var(--color-blanco);
+    color: var(--color-blanco);
+    background-color: var(--color-verde);
+}
+
+.Tablas {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 25vh;
+    
+    justify-content: center;
+    align-items: center;
+}
+.content_Tablas {
+    width: 98%;
+    height: 98%;
+    background: var(--color-blanco);
+    border-radius: 12px;
+    border: 10px solid var(--color-blanco);
+    box-shadow: var(--shadow-base);
+    overflow-y: auto;   /* scroll vertical */
+    overflow-x: auto; /* NO scroll horizontal aquí */
+}
+table {
+    width: 25vw;
+    height: auto;
+    
+    background: var(--color-blanco);
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    font-family: var(--font-family-primary);
+}
+
+thead {
+    width: 100%;
+    background-color: var(--color-gris-claro);
+    border-radius: 5px;
+    position: sticky;
+    user-select: none;
+    top: 0;               /* Encabezado pegado */
+    z-index: 0;
+}
+
+thead th {
+    padding: 10px 5px!important;
+    font-size: var(--font-size-14)!important;
+    font-weight: var(--font-weight-semi-bold)!important;
+    font-family: var(--font-family-primary)!important;
+    color: var(--color-primario-80)!important;
+    text-align: center!important;
+    white-space: nowrap!important;
+    text-transform: uppercase!important;
+    border-bottom: none!important;
+}
+thead, tbody tr {
+    display: table!important;
+    width: 100%!important;
+    table-layout: fixed!important;
+}
+tbody td {
+    padding: 10px 8px!important;
+    border-bottom: 1px solid #eee!important;
+    font-size: var(--font-size-12)!important;
+    color: var(--color-primario-80)!important;
+    user-select: none!important;
+    text-align: center!important;
+    font-weight: var(--font-weight-regular);
+}
+
+tbody tr:hover {
+    background-color: #f4f4f4!important;
+}
+
+
+/* Opcional: columnas ajustadas automáticamente */
+table th, table td {
+    width: auto!important;
+}
+
+/* Si quieres que las columnas tengan el mismo ancho, descomenta */
+/*
+table th, table td {
+    width: calc(100% / 8);
+}
+*/
+/* Estilo personalizado para navegadores Webkit (Chrome, Edge, Safari) */
+.content_Tablas::-webkit-scrollbar {
+    width: 10px;            /* ancho del scroll vertical */
+    height: 10px;   
+}
+
+.content_Tablas::-webkit-scrollbar-track {
+    background: none;    /* color del fondo del track */
+    border-radius: 8px;
+}
+
+.content_Tablas::-webkit-scrollbar-thumb {
+    background-color: var(--color-gris-suave); /* color del thumb */
+    border-radius: 8px;
+    border: 2px solid var(--color-gris-claro); /* espacio alrededor del thumb */
+}
+
+/* Ocultar iconos de ordenamiento de DataTables */
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after {
+    display: none !important;
+}
+
+
+
+.Contenedor_Form_Validaciones{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.contenedor_validaciones{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 10px;
+}
+
+.lista_validaciones{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.validacion_item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    gap: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-gris-35);
+}
+.nombre_requerimiento{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-18);
+    text-transform: uppercase;
+    background-color: var(--color-gris-claro);
+    border-radius: 5px;
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--color-primario-80);
+}
+
+.fila_controles{
+    display: flex;
+}
+.btn-Visualizar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-azul);
+    font-size: var(--font-size-14);
+    font-family: var(--font-family-primary);
+    color: var(--color-azul);
+    background-color: var(--color-blanco);
+    cursor: pointer;
+}
+.btn-Visualizar i{
+    line-height: 0;
+}
+.botones_accion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    gap: 10px;
+    box-shadow: none;
+}
+.botones_accion button{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+.Ver_documento{
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+    flex-direction: column;
+    width: 50%;
+    left: 48%;
+    height: 85%;
+    background-color: #373636;
+    justify-content: center;
+    align-items: center;
+}
+.content_canvas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.Diploma{
+    width: 100%;
+    user-select: none;
+    text-align: center;
+}
+#miCanvas {
+    width: 50%;
+    max-width: 1000px; 
+    height: auto;
+    border: 1px solid #ddd; /* opcional */
+}
+.ContentValidacion{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 85vh;
+    gap: 5px;
+    overflow-y: auto;
+}
+.lista > div{
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color-gris-claro);
+}
+.lista div b{
+    text-transform: uppercase;
+}
+.return{
+    line-height: 0%;
+    font-size: var(--font-size-32);
+    color: var(--color-primario);
+    cursor: pointer;  
+    transition: all 0.9s ease-in-out;  
+}
+.contentbotones{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.inputArchivo{
+    width: 100%;
+}

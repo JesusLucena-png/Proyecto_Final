@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <div id="pdf-controls">
+  <button id="prev">⬅️ Anterior</button>
+  <span>Página <span id="page_num"></span> de <span id="page_count"></span></span>
+  <button id="next">➡️ Siguiente</button>
+
+</div>
+
+<canvas style="width: 90vw; box-shadow: 0 4px 4px ;"  id="the-canvas"></canvas>
+<script>
+  // Ruta del archivo PDF
+  const url = '/Colombia (1).pdf';
+
+  // Cargar el documento PDF
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    console.log('PDF cargado');
+
+    // Obtener la primera página
+    pdf.getPage(1).then(page => {
+      console.log('Página cargada');
+
+      const scale = 3;
+      const viewport = page.getViewport({ scale });
+
+      // Crear canvas
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('3d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      // Insertar el canvas en el div
+      document.getElementById('pdf-viewer').appendChild(canvas);
+
+      // Renderizar la página
+      const renderContext = { canvasContext: context, viewport };
+      page.render(renderContext);
+    });
+  });
+</script>
+<script>
+  let pdfDoc = null,
+      pageNum = 1,
+      scale = 1.5,
+      canvas = document.getElementById('the-canvas'),
+      ctx = canvas.getContext('2d');
+
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    pdfDoc = pdf;
+    document.getElementById('page_count').textContent = pdf.numPages;
+    renderPage(pageNum);
+  });
+
+  function renderPage(num) {
+    pdfDoc.getPage(num).then(page => {
+      const viewport = page.getViewport({ scale });
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      const renderContext = { canvasContext: ctx, viewport };
+      page.render(renderContext);
+      document.getElementById('page_num').textContent = num;
+    });
+  }
+
+  document.getElementById('prev').addEventListener('click', () => {
+    if (pageNum <= 1) return;
+    pageNum--;
+    renderPage(pageNum);
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    renderPage(pageNum);
+  });
+</script>
+
+</body>
+</html>
