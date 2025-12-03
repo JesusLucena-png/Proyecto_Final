@@ -102,25 +102,6 @@ $sql = "
                     <option value="<?= $tipo['name'] ?>"><?= $tipo['name'] ?></option>
                 <?php } ?>
             </select>
-
-            <!-- FILTRO: Programa -->
-            <select id="filtroPrograma" class="filtro">
-                <option value="">Programa</option>
-                <?php while ($p = $programasResultado->fetch_assoc()) { ?>
-                    <option value="<?= $p['code'] ?>">
-                        <?= $p['code'] ?> - <?= $p['name'] ?>
-                    </option>
-                <?php } ?>
-            </select>
-
-            <!-- FILTRO: Estado del diploma -->
-            <select id="filtroEstado" class="filtro">
-                <option value="">Estado Diploma</option>
-                <option value="Pendiente">Pendiente</option>
-                <option value="Expedido">Expedido</option>
-                <option value="Revocado">Revocado</option>
-            </select>
-
         </div>
     </section>
 

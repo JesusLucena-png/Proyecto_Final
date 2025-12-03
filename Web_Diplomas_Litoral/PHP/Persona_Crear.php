@@ -74,7 +74,7 @@ $errores = [
 <?php include "Header.php"; ?>
 
 <!-- CONTENIDO -->
-<main class="contenido">
+<main class="contenido2">
     <section class="Contenedor_Form">
 
         <!-- ALERTA -->
