@@ -112,7 +112,7 @@ $sql = "SELECT
                     <tr>
                         <th>code Grupo</th>
                         <th>Programa       </th>
-                        <th>nombre Del Estudiante</th>
+                        <th>nombre Del Estudiante </th>
                         <th class="Tabla_none">Identidad    </th>
                         <th>R Totales</th>
                         <th>N° R montados</th>
@@ -125,8 +125,8 @@ $sql = "SELECT
                     <?php while ($fila = $resultado->fetch_assoc()) { ?>
                         <tr>
                             <td><?= $fila['nombre_grupo'] ?></td>
-                            <td><a href="Administración_Ver_Usuarios.php?id=<?= $fila['People_id'] ?>" class="Name_link"><?= $fila['student_full_name'] ?></a></td>
                             <td><?= $fila['program_name'] ?></td>
+                            <td><a href="Administración_Ver_Usuarios.php?id=<?= $fila['People_id'] ?>" class="Name_link"><?= $fila['student_full_name'] ?></a></td>
                             <td class="Tabla_none"><?= $fila['Identidad'] ?></td>
                             <td><?= $fila['total_requirements'] ?></td>
                             <td><?= $fila['uploaded_requirements'] ?></td>

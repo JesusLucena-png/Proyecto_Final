@@ -164,10 +164,10 @@ $errores = [
 
             <div class="Form_info">
                 <label>Teléfono Principal *</label>
-                <input type="tel" id="telefono_principal" required value="<?= old('telefono_principal') ?>">
+                <input type="tel" id="telefono_principal" pattern="^[0-9]+$" required value="<?= old('telefono_principal') ?>">
             </div>
 
-            <input type="hidden" name="telefono_principal" id="telefono_principal_final">
+            <input type="hidden" name="telefono_principal" pattern="^[0-9]+$" id="telefono_principal_final">
 
             <div class="Form_info">
                 <label>Teléfono Secundario</label>

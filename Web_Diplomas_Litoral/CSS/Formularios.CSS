@@ -545,3 +545,8 @@ table.dataTable thead .sorting_desc:after {
 .inputArchivo{
     width: 100%;
 }
+@media (max-width: 1000px) {
+    body{
+        font-size: var(--font-size-responsive-md);
+    }
+}

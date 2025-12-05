@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Usuario duplicado (username = documento)
     $username = $document_id;
-    $chkUser = $conn->prepare("SELECT Id FROM USUARIOS WHERE Usuario_Nombre = ? LIMIT 1");
+    $chkUser = $conn->prepare("SELECT Id FROM users WHERE Usuario_Nombre = ? LIMIT 1");
     $chkUser->bind_param("s", $username);
     $chkUser->execute();
     $chkUser->store_result();
@@ -224,7 +224,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
        TODO OK → REDIRIGIR
     ========================================================== */
 
-    header("Location: Personas.php?msg=creado&type=success");
+    header("Location: Administración_Usuarios.php?msg=creado&type=success");
     exit;
 }
 ?>

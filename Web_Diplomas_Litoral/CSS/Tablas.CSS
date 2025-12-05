@@ -438,3 +438,8 @@ table.dataTable thead .sorting_desc:after {
     80% { transform: translateX(10px); }
     100% { transform: translateX(0); }
 }
+@media (max-width: 1000px) {
+    body{
+        font-size: var(--font-size-responsive-md);
+    }
+}
